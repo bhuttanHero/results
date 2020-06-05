@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<style type="text/css">
+		.container {
+			margin-top: 100px;
+      background-color:hsla(120,100%,50%,0.3);
+		}
+		.btn-primary {
+			width: 100%;
+		}
+    input {
+      border: 4px;
+      margin: 4px 20px;
+      border: 2px solid rgb(147, 165, 148); 
+    }
+  </style>
+  
+</head>
+<body>
+  <header>
+    <img width="100%" src="currency.png" onclick="location.reload();">
+  </header>
+  <section class = "sectionDetais">
+    <div class="panel panel-primary">
+      <div class="panel-heading" style = "font-weight: bold;color:red;font-size:30px">Check Your Results</div>
+      <div class="panel-body">
+        <input type="date" id="myInput" placeholder="Search for result..">
+        <input type = "submit" value ="Submit" onClick="myFunction()">
+    <table id="myTable", class="table table-striped">
+      <thead>
+      <tr class = "header">
+        <th style="width:20%;color:green;" >Date</th>
+        <th style="width:10%;color:green;" >11:30 AM</th>
+        <th style="width:10%;color:green;" >01:30 PM</th>
+        <th style="width:10%;color:green;" >06:30 PM</th>
+        <th style="width:10%;color:green;" >07:50 PM</th>
+      </tr>
+      </thead>
+      <tbody>
+       <tr>
+         <td>04-06-2020</td>
+         <td>662</td>
+         <td>008</td>
+         <td>589</td>
+         <td>722</td>
+       </tr>
+       <tr>
+         <td>03-06-2020</td>
+         <td>662</td>
+         <td>008</td>
+         <td>589</td>
+         <td>722</td>
+       </tr>
+       <tr>
+         <td>02-06-2020</td>
+         <td>662</td>
+         <td>008</td>
+         <td>589</td>
+         <td>722</td>
+       </tr>
+      <tr>
+        <td>01-06-2020</td>
+        <td>121</td>
+        <td>345</td>
+        <td>109</td>
+        <td>886</td>
+      </tr>
+      <tr>
+         <td>31-05-2020</td>
+         <td>934</td>
+         <td>120</td>
+         <td>456</td>
+         <td>723</td>
+       </tr>
+       <tr>
+         <td>30-05-2020</td>
+         <td>245</td>
+         <td>456</td>
+         <td>567</td>
+         <td>321</td>
+       </tr>
+       <tr>
+         <td>29-05-2020</td>
+         <td>662</td>
+         <td>008</td>
+         <td>589</td>
+         <td>722</td>
+       </tr>
+       <tr>
+         <td>28-05-2020</td>
+         <td>662</td>
+         <td>008</td>
+         <td>589</td>
+         <td>722</td>
+       </tr>
+       <tr>
+         <td>27-05-2020</td>
+         <td>662</td>
+         <td>008</td>
+         <td>589</td>
+         <td>722</td>
+       </tr>
+       <tr>
+         <td>26-05-2020</td>
+         <td>662</td>
+         <td>008</td>
+         <td>589</td>
+         <td>722</td>
+       </tr>
+      </tbody>
+      </div>
+     </div> 
+    </table>
+  </section>
+</div>
+
+<footer>
+  <img width="100%" src="footerCurrency.png" onclick="location.reload();">
+</footer>
+
+<script>
+  function myFunction() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value;
+    var splitFilter = filter.split("-"); 
+    var reverseArray = splitFilter.reverse();
+    var joinFilter = reverseArray.join("-"); 
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(joinFilter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }       
+    }
+  }
+ </script>
+
+</body>
+</html>
