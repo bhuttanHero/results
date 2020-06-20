@@ -4,23 +4,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="HandheldFriendly" content="true">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<style type="text/css">
-		.container {
-			margin-top: 100px;
-      background-color:hsla(120,100%,50%,0.3);
-		}
-		.btn-primary {
-			width: 100%;
-		}
-    input {
-      border: 4px;
-      margin: 4px 20px;
-      border: 2px solid rgb(147, 165, 148); 
-    }
-  </style>
-  
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css-Content.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="search.js"></script>
 </head>
+
 <body>
   <header>
     <img width="100%" src="currency.png" onclick="location.reload();">
@@ -29,123 +18,108 @@
     <div class="panel panel-primary">
       <div class="panel-heading" style = "font-weight: bold;color:red;font-size:30px">Check Your Results</div>
       <div class="panel-body">
-        <input type="date" id="myInput" placeholder="Search for result..">
-        <input type = "submit" value ="Submit" onClick="myFunction()">
-    <table id="myTable", class="table table-striped">
-      <thead>
-      <tr class = "header">
-        <th style="width:20%;color:green;" >Date</th>
-        <th style="width:10%;color:green;" >11:30 AM</th>
-        <th style="width:10%;color:green;" >01:30 PM</th>
-        <th style="width:10%;color:green;" >06:30 PM</th>
-        <th style="width:10%;color:green;" >08:30 PM</th>
-	</tr>
-         <td> 20-06-2020</td>
-         <td>72344</td>
-         <td>27643</td>
-         <td>12356</td>
-         <td>46815</td>
-	</tr>
-	 <tr>
-         <td>19-06-2020</td>
-         <td>84959</td>
-         <td>92752</td>
-         <td>41271</td>
-         <td>39386</td> 
-      </tr>
-	<tr>
-         <td>18-06-2020</td>
-         <td>18789</td>
-         <td>98995</td>
-         <td>80203</td>
-         <td>11418</td>
-       </tr>       
-	<tr>
-        <td>17-06-2020</td>
-        <td>52563</td>
-        <td>23967</td>
-        <td>77884</td>
-        <td>89620</td>
-      </tr>
-         <td>16-06-2020</td>
-         <td>98722</td>
-         <td>33145</td>
-         <td>23076</td>
-         <td>44389</td> 
-	</tr>   
-        <td>15-06-2020</td>
-        <td>48455</td>
-        <td>43252</td>
-        <td>51731</td>
-        <td>69327</td>
-      </tr>
-        <td>14-06-2020</td>
-        <td>92699</td>
-        <td>85182</td>
-        <td>64540</td>
-        <td>90608</td>
-      </tr>
-      </thead> <tr>
-         <td>13-06-2020</td>
-         <td>971</td>
-         <td>205</td>
-         <td>65104</td>
-         <td>89076</td>
-       </tr>
-      <tbody> <tr>
-         <td>12-06-2020</td>
-         <td>850</td>
-         <td>379</td>
-         <td>486</td>
-         <td>022</td>
-       </tr>
-         <td> 11-06-2020</td>
-         <td>574</td>
-         <td>887</td>
-         <td>996</td>
-         <td>678</td>
-       </tr <tr>
-         <td>10-06-2020</td>
-         <td>458</td>
-         <td>456</td>
-         <td>890</td>
-         <td>772</td>
-       
-       </tr>
-      </tbody>
+        <input type = "date" id = "myInput" placeholder = "Search for result..">
+        <input type = "submit" value = "Submit" onClick = "myFunction()">
+        
+        <!-- Start of the Table -->
+
+        <table id="myTable", class="table table-striped">
+          <thead>
+          <tr class = "header">
+            <th style="width:20%;color:green;" >Date</th>
+            <th style="width:10%;color:green;" >11:30 AM</th>
+            <th style="width:10%;color:green;" >01:30 PM</th>
+            <th style="width:10%;color:green;" >06:30 PM</th>
+            <th style="width:10%;color:green;" >07:50 PM</th>
+          </tr>
+          </thead>
+
+          <!-- Table body started -->
+
+          <tbody>
+            <tr>
+              <td>04-06-2020</td>
+              <td>662</td>
+              <td>008</td>
+              <td>589</td>
+              <td>722</td>
+            </tr>
+            <tr>
+              <td>03-06-2020</td>
+              <td>662</td>
+              <td>008</td>
+              <td>589</td>
+              <td>722</td>
+            </tr>
+            <tr>
+              <td>02-06-2020</td>
+              <td>662</td>
+              <td>008</td>
+              <td>589</td>
+              <td>722</td>
+            </tr>
+            <tr>
+              <td>01-06-2020</td>
+              <td>121</td>
+              <td>345</td>
+              <td>109</td>
+              <td>886</td>
+            </tr>
+            <tr>
+              <td>31-05-2020</td>
+              <td>934</td>
+              <td>120</td>
+              <td>456</td>
+              <td>723</td>
+            </tr>
+            <tr>
+              <td>30-05-2020</td>
+              <td>245</td>
+              <td>456</td>
+              <td>567</td>
+              <td>321</td>
+            </tr>
+            <tr>
+              <td>29-05-2020</td>
+              <td>662</td>
+              <td>008</td>
+              <td>589</td>
+              <td>722</td>
+            </tr>
+            <tr>
+              <td>28-05-2020</td>
+              <td>662</td>
+              <td>008</td>
+              <td>589</td>
+              <td>722</td>
+            </tr>
+            <tr>
+              <td>27-05-2020</td>
+              <td>662</td>
+              <td>008</td>
+              <td>589</td>
+              <td>722</td>
+            </tr>
+            <tr>
+              <td>19-06-2020</td>
+              <td>662</td>
+              <td>008</td>
+              <td>589</td>
+              <td>722</td>
+            </tr>
+          </tbody>
+
+          <!-- Table body Ends -->
+        </table>
+            <!-- End of the Table -->
       </div>
-     </div> 
-    </table>
+    </div>
   </section>
 </div>
 
 <footer>
   <img width="100%" src="footerCurrency.png" onclick="location.reload();">
 </footer>
-
-<script>
-  function myFunction() {
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value;
-    var splitFilter = filter.split("-"); 
-    var reverseArray = splitFilter.reverse();
-    var joinFilter = reverseArray.join("-"); 
-    table = document.getElementById("myTable");
-    tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[0];
-      if (td) {
-        txtValue = td.textContent || td.innerText;
-        if (txtValue.toUpperCase().indexOf(joinFilter) > -1) {
-          tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
-        }
-      }       
-    }
-  }
- </script>
 
 </body>
 </html>

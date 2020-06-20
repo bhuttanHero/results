@@ -1,0 +1,18 @@
+.container {
+    	margin-top: 100px;
+        background-color:hsla(120,100%,50%,0.3);
+}
+
+.btn-primary {
+    width: 100%;
+}
+
+.button {
+    width: 100%;
+}
+
+input {
+    border: 4px;
+    margin: 4px 20px;
+    border: 2px solid rgb(147, 165, 148); 
+}
