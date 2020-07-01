@@ -22,8 +22,9 @@ function myFunction() {
 
   $("document").ready(function () {
     let today = new Date();
+    let currentDateDetails = (today.getDate()) <=9 ? '0'+(today.getDate()) : (today.getDate());
     let monthDetails = (today.getMonth()+1) <=9 ? '0'+(today.getMonth()+1) : (today.getMonth()+1);
-    let date = today.getDate()+'-'+monthDetails+'-'+today.getFullYear();
+    let date = currentDateDetails+'-'+monthDetails+'-'+today.getFullYear();
     table = document.getElementById("myTable");
     tr = table.getElementsByTagName("tr");
     for (i = 0; i < tr.length; i++) {
